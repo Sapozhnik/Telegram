@@ -229,7 +229,7 @@ static void controllerStateCallback(CVoIPController *controller, int state)
 
 - (void)_controllerInit
 {
-    _controller = [[SAtomic alloc] initWithValue:nil recursive:true];
+    _controller = [[SAtomic alloc] initWithValue:nil];
     [_controller modify:^id(VoIPControllerHolder *current) {
         assert(current == nil);
 
